@@ -60,9 +60,11 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *Firefox[] = { "firefox", NULL };
-static const char *shutcmd[] = { "systemctl", "poweroff", NULL };
-static const char *rebootcmd[] = { "systemctl", "reboot", NULL };
-static const char *suspendcmd[] = { "systemctl", "suspend", NULL };
+//static const char *shutcmd[] = { "systemctl", "poweroff", NULL };
+//static const char *rebootcmd[] = { "systemctl", "reboot", NULL };
+//static const char *suspendcmd[] = { "systemctl", "suspend", NULL };
+//static const char *logoutcmd[] = { "logout", NULL };
+static const char *pwrmenu[] = {"rofi", "-show", "power-menu", "-modi", "power-menu:rofi-power-menu", NULL};
 
 #include "shiftview.c"
 static const Key keys[] = {
@@ -78,7 +80,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
@@ -94,9 +96,11 @@ static const Key keys[] = {
 	{ MODKEY,			XK_n,	   shiftview,	   { .i = +1 } },
 	{ MODKEY,			XK_F2,	   spawn,	   {.v = Firefox } },
 //power management
-	{ MODKEY|ShiftMask,		XK_F8,	   spawn,	   {.v = suspendcmd } },
-	{ MODKEY|ShiftMask,		XK_F9,	   spawn,	   {.v = rebootcmd } },
-	{ MODKEY|ShiftMask,		XK_F10,	   spawn,	   {.v = shutcmd } },
+//	{ MODKEY|ShiftMask,		XK_F7,	   spawn,	   {.v = logoutcmd } },
+//	{ MODKEY|ShiftMask,		XK_F8,	   spawn,	   {.v = suspendcmd } },
+//	{ MODKEY|ShiftMask,		XK_F9,	   spawn,	   {.v = rebootcmd } },
+//	{ MODKEY|ShiftMask,		XK_F10,	   spawn,	   {.v = shutcmd } },
+  { MODKEY|ShiftMask,		XK_F10,	   spawn,	   {.v = pwrmenu } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -106,7 +110,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+//	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
