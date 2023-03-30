@@ -1,5 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 /* appearance */
+#define ICONSIZE 16   /* icon size */
+#define ICONSPACING 5 /* space between icon and title */
+
 static unsigned int borderpx  = 3;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static int showbar            = 1;        /* 0 means no bar */
