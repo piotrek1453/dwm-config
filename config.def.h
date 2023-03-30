@@ -1,23 +1,21 @@
 /* See LICENSE file for copyright and license details. */
-//#include "/home/juchap/sthemes/manga/colors-wal-dwm.h"
 /* appearance */
-static unsigned int borderpx  = 1;        /* border pixel of windows */
+static unsigned int borderpx  = 3;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static const int extrabarright      = 1;        /* 1 means extra bar text on right */
+static const int extrabarright      = 0;        /* 1 means extra bar text on right */
 static const char statussep         = ';';      /* separator between status bars */
-static char font[]            = "SymbolsNerdFont:size=18:antialias=true:autohint=true";
-static char dmenufont[]       = "SymbolsNerdFont:size=18:antialias=true:autohint=true";
-static const char *fonts[]          = { "Iosevka Nerd Font Complete Bold:size=16:antialias=true:autohint=true",\
-  "SymbolsNerdFont:size=16:antialias=true:autohint=true", \
-    "NotoColorEmoji:size=16:antialias=trueautohint=true"};
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
-static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#005577";
-static char selbgcolor[]            = "#005577";
+static char font[]            = "Lucida Console Nerd Font Mono:size=16:antialias=true:autohint=true";
+static char dmenufont[]       = "Lucida Console Nerd Font Mono:size=18:antialias=true:autohint=true";
+static const char *fonts[]          = { "Lucida Console Nerd Font Mono:size=16:antialias=true:autohint=true",\
+  "Font Awesome 6 Free:size=16:antialias=trueautohint=true"};
+static char normbgcolor[]           = "#4c1d8c";
+static char normbordercolor[]       = "#f28107";
+static char normfgcolor[]           = "#f28107";
+static char selfgcolor[]            = "#000000";
+static char selbordercolor[]        = "#f2fa05";
+static char selbgcolor[]            = "#f28107";
 static char *colors[][3] = {
   /*               fg           bg           border   */
   [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },

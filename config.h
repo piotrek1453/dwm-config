@@ -1,23 +1,21 @@
 /* See LICENSE file for copyright and license details. */
-//#include "/home/juchap/sthemes/manga/colors-wal-dwm.h"
 /* appearance */
-static unsigned int borderpx  = 1;        /* border pixel of windows */
+static unsigned int borderpx  = 3;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static const int extrabarright      = 1;        /* 1 means extra bar text on right */
+static const int extrabarright      = 0;        /* 1 means extra bar text on right */
 static const char statussep         = ';';      /* separator between status bars */
-static char font[]            = "SymbolsNerdFont:size=18:antialias=true:autohint=true";
-static char dmenufont[]       = "SymbolsNerdFont:size=18:antialias=true:autohint=true";
-static const char *fonts[]          = { "Iosevka Nerd Font Complete Bold:size=16:antialias=true:autohint=true",\
-  "SymbolsNerdFont:size=16:antialias=true:autohint=true", \
-    "NotoColorEmoji:size=16:antialias=trueautohint=true"};
-static char normbgcolor[]           = "#222222";
-static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
-static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#005577";
-static char selbgcolor[]            = "#005577";
+static char font[]            = "Lucida Console Nerd Font Mono:size=16:antialias=true:autohint=true";
+static char dmenufont[]       = "Lucida Console Nerd Font Mono:size=18:antialias=true:autohint=true";
+static const char *fonts[]          = { "Lucida Console Nerd Font Mono:size=16:antialias=true:autohint=true",\
+  "Font Awesome 6 Free:size=16:antialias=trueautohint=true"};
+static char normbgcolor[]           = "#4c1d8c";
+static char normbordercolor[]       = "#f28107";
+static char normfgcolor[]           = "#f28107";
+static char selfgcolor[]            = "#000000";
+static char selbordercolor[]        = "#f2fa05";
+static char selbgcolor[]            = "#f28107";
 static char *colors[][3] = {
   /*               fg           bg           border   */
   [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -61,9 +59,6 @@ static const Layout layouts[] = {
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/usr/local/bin/st", "-c", cmd, NULL } }
-//#define XF86XK_AudioLowerVolume	0x1008FF11   /* Volume control down        */
-//#define XF86XK_AudioMute	0x1008FF12   /* Mute sound from the system */
-//#define XF86XK_AudioRaiseVolume	0x1008FF13   /* Volume control up          */
 #include <X11/XF86keysym.h>
 
 /* commands */
@@ -127,23 +122,23 @@ static const Key keys[] = {
   { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
   { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
   { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-  { MODKEY|ControlMask,             XK_q,      quit,           {.i = 23} },
-  { MODKEY,			XK_b,	   shiftview,	   { .i = -1 } },
-  { MODKEY,			XK_n,	   shiftview,	   { .i = +1 } },
-  { MODKEY,			XK_F2,	   spawn,	   {.v = Firefox } },
-  { MODKEY|ShiftMask,		XK_F10,	   spawn,	   {.v = pwrmenu } },
-  { 0,   XF86XK_AudioRaiseVolume, spawn,    {.v = upvol }},
-  { 0,   XF86XK_AudioLowerVolume, spawn,    {.v = downvol }},
-  { 0,   XF86XK_AudioMute, spawn,    {.v = mute }},
+  { MODKEY|ControlMask,           XK_q,      quit,           {.i = 23} },
+  { MODKEY,			                  XK_b,      shiftview,	   { .i = -1 } },
+  { MODKEY,			                  XK_n,	     shiftview,	   { .i = +1 } },
+  { MODKEY,			                  XK_F2,	   spawn,	   {.v = Firefox } },
+  { MODKEY|ShiftMask,		          XK_F10,	   spawn,	   {.v = pwrmenu } },
+  { 0,                            XF86XK_AudioRaiseVolume,	     spawn,    {.v = upvol }},
+  { 0,                            XF86XK_AudioLowerVolume,	     spawn,    {.v = downvol }},
+  { 0,                            XF86XK_AudioMute,	     spawn,    {.v = mute }},
   TAGKEYS(                        XK_1,                      0)
-    TAGKEYS(                        XK_2,                      1)
-    TAGKEYS(                        XK_3,                      2)
-    TAGKEYS(                        XK_4,                      3)
-    TAGKEYS(                        XK_5,                      4)
-    TAGKEYS(                        XK_6,                      5)
-    TAGKEYS(                        XK_7,                      6)
-    TAGKEYS(                        XK_8,                      7)
-    TAGKEYS(                        XK_9,                      8)
+  TAGKEYS(                        XK_2,                      1)
+  TAGKEYS(                        XK_3,                      2)
+  TAGKEYS(                        XK_4,                      3)
+  TAGKEYS(                        XK_5,                      4)
+  TAGKEYS(                        XK_6,                      5)
+  TAGKEYS(                        XK_7,                      6)
+  TAGKEYS(                        XK_8,                      7)
+  TAGKEYS(                        XK_9,                      8)
 };
 
 /* button definitions */
