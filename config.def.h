@@ -4,12 +4,12 @@ static unsigned int borderpx  = 3;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
-static const int extrabarright      = 0;        /* 1 means extra bar text on right */
+static const int extrabarright      = 1;        /* 1 means extra bar text on right */
 static const char statussep         = ';';      /* separator between status bars */
-static char font[]            = "Lucida Console Nerd Font Mono:size=16:antialias=true:autohint=true";
-static char dmenufont[]       = "Lucida Console Nerd Font Mono:size=18:antialias=true:autohint=true";
-static const char *fonts[]          = { "Lucida Console Nerd Font Mono:size=16:antialias=true:autohint=true",\
-  "Font Awesome 6 Free:size=16:antialias=trueautohint=true"};
+static char font[]            = "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true";
+static char dmenufont[]       = "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true";
+static const char *fonts[]          = { "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true",\
+  "Font Awesome 6 Free:size=14:antialias=trueautohint=true"};
 static char normbgcolor[]           = "#4c1d8c";
 static char normbordercolor[]       = "#f28107";
 static char normfgcolor[]           = "#f28107";
