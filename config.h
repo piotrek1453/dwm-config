@@ -16,7 +16,7 @@ static const char *fonts[]          = { "Lucida Console Nerd Font Mono:size=14:a
 static char normbgcolor[]           = "#4c1d8c";
 static char normbordercolor[]       = "#f28107";
 static char normfgcolor[]           = "#f28107";
-static char selfgcolor[]            = "#000000";
+static char selfgcolor[]            = "#f0fc00";
 static char selbordercolor[]        = "#4c1d8c";
 static char selbgcolor[]            = "#f28107";
 static char *colors[][3] = {
