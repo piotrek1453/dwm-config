@@ -75,6 +75,7 @@ static const char *upvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "+5%", N
 static const char *downvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL};
 static const char *mute[] = {"/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL};
 
+static const char *flameshot[]= {"flameshot", "gui", NULL};
 #include "shiftview.c"
 /*
  * Xresources preferences to load at startup
@@ -133,6 +134,9 @@ static const Key keys[] = {
   { 0,                            XF86XK_AudioRaiseVolume,	     spawn,    {.v = upvol }},
   { 0,                            XF86XK_AudioLowerVolume,	     spawn,    {.v = downvol }},
   { 0,                            XF86XK_AudioMute,	     spawn,    {.v = mute }},
+//screenshot
+  {MODKEY|ShiftMask,              XK_s,                  spawn,    {.v = flameshot }},
+  {MODKEY|ShiftMask,              XK_S,                  spawn,    {.v = flameshot }},
   TAGKEYS(                        XK_1,                      0)
   TAGKEYS(                        XK_2,                      1)
   TAGKEYS(                        XK_3,                      2)
