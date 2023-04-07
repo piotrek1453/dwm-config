@@ -12,7 +12,7 @@ static const char statussep         = ';';      /* separator between status bars
 static char font[]            = "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true";
 static char dmenufont[]       = "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true";
 static const char *fonts[]          = { "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true",\
-  "Font Awesome 6 Free:size=14:antialias=trueautohint=true"};
+  "Symbols Nerd Font:size=14:antialias=trueautohint=true"};
 static char normbgcolor[]           = "#4c1d8c";
 static char normbordercolor[]       = "#f28107";
 static char normfgcolor[]           = "#f28107";
@@ -27,7 +27,7 @@ static char *colors[][3] = {
 static const unsigned int gappx     = 5;        /* gaps between windows */
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "", "󰇮", "󰍡"};
 
 static const Rule rules[] = {
   /* xprop(1):
@@ -36,7 +36,10 @@ static const Rule rules[] = {
    */
   /* class      instance    title       tags mask     isfloating   monitor */
   { "Gimp",     NULL,       NULL,       0,            1,           -1 },
-  { "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+  { "firefox",  NULL,       NULL,       1 << 3,       0,           -1 },
+  { "betterbird", "Mail",   NULL,       1 << 4,       0,           -1 },
+  { "TelegramDesktop", "telegram-desktop",   NULL,       1 << 5,       0,           -1 },
+  { "Caprine", "caprine",   NULL,       1 << 5,       0,           -1 }
 };
 
 /* layout(s) */
