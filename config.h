@@ -5,10 +5,10 @@
 
 static unsigned int borderpx  = 3;        /* border pixel of windows */
 static unsigned int snap      = 32;       /* snap pixel */
-static int showbar            = 1;        /* 0 means no bar */
-static int topbar             = 1;        /* 0 means bottom bar */
-static const int extrabarright      = 1;        /* 1 means extra bar text on right */
+static const int showbar            = 1;        /* 0 means no standard bar */
+static const int topbar             = 1;        /* 0 means standard bar at bottom */
 static const char statussep         = ';';      /* separator between status bars */
+static const int extrabar           = 1;        /* 0 means no extra bar */          
 static char font[]            = "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true";
 static char dmenufont[]       = "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true";
 static const char *fonts[]          = { "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true",
@@ -160,6 +160,9 @@ static const Button buttons[] = {
   { ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
   { ClkWinTitle,          0,              Button2,        zoom,           {0} },
   { ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+  { ClkExBarLeftStatus,   0,              Button2,        spawn,          {.v = termcmd } },
+  { ClkExBarMiddle,       0,              Button2,        spawn,          {.v = termcmd } },
+  { ClkExBarRightStatus,  0,              Button2,        spawn,          {.v = termcmd } },  
   { ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
   { ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
   { ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
