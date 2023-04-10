@@ -11,8 +11,9 @@ static const int extrabarright      = 1;        /* 1 means extra bar text on rig
 static const char statussep         = ';';      /* separator between status bars */
 static char font[]            = "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true";
 static char dmenufont[]       = "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true";
-static const char *fonts[]          = { "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true",\
-  "Symbols Nerd Font:size=14:antialias=trueautohint=true"};
+static const char *fonts[]          = { "Lucida Console Nerd Font Mono:size=14:antialias=true:autohint=true",
+  "Symbols Nerd Font:size=14:antialias=trueautohint=true",
+  "JoyPixels:pixelsize=14"};
 static char normbgcolor[]           = "#4c1d8c";
 static char normbordercolor[]       = "#f28107";
 static char normfgcolor[]           = "#f28107";
