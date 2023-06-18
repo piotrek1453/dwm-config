@@ -14,12 +14,12 @@ static char dmenufont[]       = "Lucida Console Nerd Font Mono:size=16:antialias
 static const char *fonts[]          = { "Lucida Console Nerd Font Mono:size=16:antialias=true:autohint=true",
   "Symbols Nerd Font:size=16:antialias=trueautohint=true",
   "JoyPixels:pixelsize=16"};
-static char normbgcolor[]           = "#4c1d8c";
-static char normbordercolor[]       = "#f28107";
-static char normfgcolor[]           = "#f28107";
-static char selfgcolor[]            = "#f0fc00";
-static char selbordercolor[]        = "#4c1d8c";
-static char selbgcolor[]            = "#f28107";
+static char normbgcolor[]           = "#e1140a";
+static char normbordercolor[]       = "#00ff00";
+static char normfgcolor[]           = "#ffffff";
+static char selfgcolor[]            = "#ffffff";
+static char selbordercolor[]        = "#0000ff";
+static char selbgcolor[]            = "#000000";
 static char *colors[][3] = {
   /*               fg           bg           border   */
   [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -28,7 +28,7 @@ static char *colors[][3] = {
 static const unsigned int gappx     = 5;        /* gaps between windows */
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "", "󰇮", "󰍡"};
+static const char *tags[] = { "", "2", "3", "", "󰇮", "󰍡"};
 
 static const Rule rules[] = {
   /* xprop(1):
