@@ -81,9 +81,9 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *Firefox[] = { "firefox", NULL };
 static const char *pwrmenu[] = { "rofi", "-show", "power-menu", "-modi", "power-menu:/home/juchap/.scripts/rofi-power-menu", NULL };
 //volume control
-static const char *upvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "+5%", NULL};
-static const char *downvol[] = {"/usr/bin/pactl", "set-sink-volume", "0", "-5%", NULL};
-static const char *mute[] = {"/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL};
+static const char *upvol[] = {"pamixer", "-i", "5", NULL};
+static const char *downvol[] = {"pamixer", "-d", "5", NULL};
+static const char *mute[] = {"pamixer", "-t", NULL};
 
 static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
 static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
